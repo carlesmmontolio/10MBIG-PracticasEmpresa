@@ -1,0 +1,72 @@
+﻿<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <link type="text/css" rel="stylesheet" href="./css/application.css" />
+  <link rel="stylesheet" href="./lib/dist/themes/default/style.min.css" />
+
+  <script src="./lib/jquery.js"></script>
+  <script src="./lib/jquery-ui.js"></script>
+  <script src="./lib/jquery.browser.js"></script>
+  <script src="./lib/dist/jstree.min.js"></script>
+
+  <script src="./lib/draw2d.js"></script>
+
+  <script src="./js/Application.js"></script>
+  <script src="./js/View.js"></script>
+  <script src="./js/Toolbar.js"></script>
+  <script src="./js/TableShape.js"></script>
+
+
+	<style>
+	.draw2d_InputPort{
+	   fill:#F7F7F7;
+	   stroke:#d7d7d7;
+	}
+    .draw2d_OutputPort{
+       fill:#F7F7F7;
+       stroke:#d7d7d7;
+    }
+	</style>
+
+</head>
+
+<body id="container">
+
+   <div id="toolbar" class="navbar-default">
+   </div>
+
+   <div id="side-nav" >
+     <span id="logo">Nodos</span>
+     <div id="layer_elements"></div>
+     <div id="layer_header" class="highlight panetitle blackgradient">
+        <ul id="myUL">
+            <li><span class="caret">Entradas </span>
+                <ul class="nested">
+                    <li data-shape="inputExcel" class="palette_node_element draw2d_droppable"> Excel</li>
+                    <li data-shape="inputShp" class="palette_node_element draw2d_droppable">Shapefile</li>
+                </ul>
+            </li>
+            <li><span class="caret">Transformadores</span>
+                <ul class="nested">
+                    <li data-shape="transUnion" class="palette_node_element draw2d_droppable">Unión</li>
+                    <li data-shape="transElAtr" class="palette_node_element draw2d_droppable">Elimina Atributo</li>
+                </ul>
+            </li>
+            <li><span class="caret">Salidas</span>
+                <ul class="nested">
+                    <li data-shape="outputPostgresql" class="palette_node_element draw2d_droppable">PostgreSQL</li>
+                    <li data-shape="outputPostgis" class="palette_node_element draw2d_droppable">PostGIS</li>
+                </ul>
+            </li>
+     </div>
+   </div>
+
+   <div id="canvas">
+   </div>
+
+
+   <script src="./js/script.js"></script>
+</body>
+</html>
